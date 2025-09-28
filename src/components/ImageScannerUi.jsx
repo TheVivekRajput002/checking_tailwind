@@ -74,7 +74,7 @@ const CropHealthScanner = () => {
 
 
     return (
-        <div className="max-w-[80%] mx-auto bg-white p-6 ">
+        <div className="sm-max-w-[80%]   mx-auto bg-white p-6 ">
             {/* Header */}
             <div className="text-center mb-6">
                 <h1 className="text-2xl font-semibold text-green-800 mb-2">फसल स्वास्थ्य स्कैनर</h1>

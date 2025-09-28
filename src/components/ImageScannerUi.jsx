@@ -102,7 +102,7 @@ const CropHealthScanner = () => {
                             screenshotFormat="image/jpeg"
                             screenshotQuality={0.8}
                             videoConstraints={videoConstraints}
-                            className="w-full max-w-lg mx-auto rounded-lg shadow-lg"
+                            className="w-full max-w-lg mx-auto rounded-lg"
                         />
                     )}
                 </div>

@@ -111,12 +111,22 @@ const CropHealthScanner = () => {
             {/* Camera Button */}
             <button
                 // onClick={triggerFileInput}
-                onClick={retake}
+                onClick={capture}
                 className="w-full bg-green-600 text-white py-3 rounded-xl font-medium mb-4 flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
             >
                 <Camera className="w-5 h-5" />
                 फोटो लें
             </button>
+
+            {/* switch camera */}
+
+            <button
+                onClick={switchCamera}
+                className="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors"
+            >
+                {facingMode === "environment" ? "Switch to Front" : "Switch to Back"}
+            </button>
+
 
             {/* Upload Button */}
             <button

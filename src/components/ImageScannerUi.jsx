@@ -84,7 +84,7 @@ const CropHealthScanner = () => {
             {/* Camera/Upload Area */}
             <div
                 // onClick={triggerFileInput}
-                className="bg-gradient-to-br from-green-50 to-green-100 border-2 border-dashed border-green-400 rounded-xl p-12 text-center mb-5 cursor-pointer hover:from-green-100 hover:to-green-200 transition-all duration-300"
+                className="bg-gradient-to-br from-green-50 to-green-100 border-2 border-dashed border-green-400 rounded-xl p-3 text-center mb-5 cursor-pointer hover:from-green-100 hover:to-green-200 transition-all duration-300"
             >
                 <div className="mb-4">
                     {imgSrc ? (

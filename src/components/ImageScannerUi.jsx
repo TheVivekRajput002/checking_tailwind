@@ -1,5 +1,5 @@
 
-import { Camera, Upload } from 'lucide-react';
+import { Camera, Upload, repeat} from 'lucide-react';
 import React, { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
 
@@ -130,7 +130,7 @@ const CropHealthScanner = () => {
                 onClick={switchCamera}
                 className="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors"
             >
-                <switch-camera  />
+                <repeat className="w-5 h-5"  />
             </button>
 
 

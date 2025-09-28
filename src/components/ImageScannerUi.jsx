@@ -109,13 +109,21 @@ const CropHealthScanner = () => {
             </div>
 
             {/* Camera Button */}
-            {imgSrc ? (
+            {imgSrc ? (<div>
                 <button
                     onClick={retake}
                     className="w-full bg-blue-600 text-white py-3 rounded-xl font-medium mb-4 flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
                 >
                     Retake photo
                 </button>
+                <button
+                    onClick={retake}
+                    className="w-full bg-amber-500 text-white py-3 rounded-xl font-medium mb-4 flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
+                >
+                    send
+                </button>
+
+            </div>
             ) : (<button
                 onClick={capture}
                 className="w-full bg-green-600 text-white py-3 rounded-xl font-medium mb-4 flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
@@ -167,13 +175,6 @@ const CropHealthScanner = () => {
                 className="hidden"
                 capture="environment"
             />
-
-            {/* Loading state */}
-            {isScanning && (
-                <div className="text-center text-green-600 font-medium">
-                    स्कैन हो रहा है...
-                </div>
-            )}
 
             {/* below section  */}
 

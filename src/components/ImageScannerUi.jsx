@@ -112,7 +112,7 @@ const CropHealthScanner = () => {
             {imgSrc ? (
                 <button
                     onClick={retake}
-                    className="px-6 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg font-medium transition-colors"
+                    className="w-full bg-blue-600 text-white py-3 rounded-xl font-medium mb-4 flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
                 >
                     Retake photo
                 </button>
@@ -130,7 +130,7 @@ const CropHealthScanner = () => {
                 onClick={switchCamera}
                 className="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors"
             >
-                {facingMode === "environment" ? "Switch to Front" : "Switch to Back"}
+                <switch-camera  />
             </button>
 
 

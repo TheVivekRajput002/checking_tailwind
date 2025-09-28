@@ -1,5 +1,5 @@
 
-import { Camera, Upload, Repeat} from 'lucide-react';
+import { Camera, Upload, Repeat } from 'lucide-react';
 import React, { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
 
@@ -122,26 +122,28 @@ const CropHealthScanner = () => {
             >
                 <Camera className="w-5 h-5" />
                 फोटो लें
-            </button>) }
+            </button>)}
 
             {/* switch camera */}
 
-            <button
-                onClick={switchCamera}
-                className="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors"
-            >
-                <Repeat className="w-5 h-5"  />
-            </button>
+            <div className='flex gap-2' >
+                <button
+                    onClick={switchCamera}
+                    className="h-auto px-6 py-2 mb-6 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium transition-colors items-center justify-center"
+                >
+                    <Repeat className="w-5 h-5" />
+                </button>
 
 
-            {/* Upload Button */}
-            <button
-                onClick={triggerFileInput}
-                className="w-full border border-green-600 text-green-600 py-2 rounded-xl font-medium mb-6 flex items-center justify-center gap-2 hover:bg-green-50 transition-colors"
-            >
-                <Upload className="w-4 h-4" />
-                गैलरी से अपलोड करें
-            </button>
+                {/* Upload Button */}
+                <button
+                    onClick={triggerFileInput}
+                    className="w-full border border-green-600 text-green-600 py-2 rounded-xl font-medium mb-6 flex items-center justify-center gap-2 hover:bg-green-50 transition-colors"
+                >
+                    <Upload className="w-4 h-4" />
+                    गैलरी से अपलोड करें
+                </button>
+            </div>
 
             {/* Photo Tips */}
             <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-6">

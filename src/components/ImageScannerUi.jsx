@@ -1,5 +1,5 @@
 
-import { Camera, Upload, Repeat } from 'lucide-react';
+import { Camera, Upload, Repeat, Clock, ChevronRight, Zap } from 'lucide-react';
 import React, { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
 
@@ -74,7 +74,7 @@ const CropHealthScanner = () => {
 
 
     return (
-        <div className="max-w-md mx-auto bg-white rounded-2xl p-6 shadow-lg">
+        <div className="max-w-[80%] mx-auto bg-white p-6 ">
             {/* Header */}
             <div className="text-center mb-6">
                 <h1 className="text-2xl font-semibold text-green-800 mb-2">फसल स्वास्थ्य स्कैनर</h1>
@@ -174,7 +174,105 @@ const CropHealthScanner = () => {
                     स्कैन हो रहा है...
                 </div>
             )}
+
+            {/* below section  */}
+
+            {/* Header */}
+            <h1 className="text-xl font-semibold text-gray-800 mb-6">हाल की स्कैन</h1>
+
+            {/* Scan Results */}
+            <div className="space-y-4">
+                {/* Tomato Scan */}
+                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                    <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                                <span className="text-xl">🍅</span>
+                            </div>
+                            <div>
+                                <h3 className="font-medium text-gray-800">टमाटर पत्ता</h3>
+                                <div className="flex items-center space-x-1 text-sm text-green-600">
+                                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                    <span>प्राथमिक धब्बा रोग</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <span className="text-sm font-medium text-gray-700">85%</span>
+                            <div className="w-10 h-6 bg-orange-400 rounded-full flex items-center justify-center">
+                                <span className="text-xs text-white">🌱</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                            <span className="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">
+                                मध्यम
+                            </span>
+                            <div className="flex items-center space-x-1 text-xs text-gray-500">
+                                <Clock className="w-3 h-3" />
+                                <span>2 घंटे पहले</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center space-x-1 text-blue-600 cursor-pointer">
+                            <ChevronRight className="w-4 h-4" />
+                            <span className="text-sm">सुझाव देखें</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Rice Scan */}
+                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                    <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <span className="text-xl">🌾</span>
+                            </div>
+                            <div>
+                                <h3 className="font-medium text-gray-800">चावल का पौधा</h3>
+                                <div className="flex items-center space-x-1 text-sm text-gray-600">
+                                    <span>स्वस्थ - कोई समस्या नहीं</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <span className="text-sm font-medium text-gray-700">92%</span>
+                            <div className="w-10 h-6 bg-orange-400 rounded-full flex items-center justify-center">
+                                <span className="text-xs text-white">🌱</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                            <span className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">
+                                अच्छा
+                            </span>
+                            <div className="flex items-center space-x-1 text-xs text-gray-500">
+                                <Clock className="w-3 h-3" />
+                                <span>1 दिन पहले</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* AI Detection Section */}
+            <div className="mt-8 bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                        <Zap className="w-5 h-5 text-purple-600" />
+                    </div>
+                    <div>
+                        <h3 className="font-medium text-gray-800">AI-संचालित पहचान</h3>
+                        <p className="text-sm text-gray-600">तुरंत 100+ बीमारियों और कीटों की पहचान करता है</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     );
 };
 
